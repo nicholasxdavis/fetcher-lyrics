@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Lyrics by Fetcher</title>
+    <link rel="stylesheet" href="options.css">
+    <style>
+        .page-wrapper { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 80px 0; }
+        .welcome-container { text-align: center; width: 100%; max-width: 580px; padding: 0 20px; }
+        .welcome-logo { width: 88px; height: auto; margin: 0 auto 36px; display: block; }
+        .welcome-container h1 { margin-bottom: 16px; font-size: 40px; letter-spacing: -0.8px; font-weight: 700; }
+        .welcome-container .subtitle { margin-bottom: 56px; font-size: 17px; color: var(--text-secondary); line-height: 1.6; }
+        
+        .card { padding: 16px 36px; border-radius: 20px; }
+        .step { display: flex; align-items: flex-start; gap: 28px; padding: 36px 0; border-bottom: 1px solid var(--border); text-align: left; }
+        .step:last-child { border-bottom: none; }
+        .step-num { background: rgba(94,152,200,0.15); color: var(--accent); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 16px; }
+        .step-text h3 { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
+        .step-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.8; }
+        
+        .action-row { display: flex; justify-content: center; gap: 20px; margin-top: 56px; }
+        .btn { padding: 16px 32px; border-radius: 30px; font-weight: 600; font-size: 15px; cursor: pointer; text-decoration: none; border: none; transition: transform 0.2s; }
+        .btn:hover { transform: scale(1.05); }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-secondary { background: var(--card-bg); color: var(--text-primary); border: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="welcome-container">
+            <img src="src/icons/icon.png" alt="Fetcher Logo" class="welcome-logo">
+            <h1>Welcome to Fetcher</h1>
+            <p class="subtitle">Your music companion is fully loaded and ready.</p>
+            
+            <div class="card">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-text">
+                        <h3>Play a track on YouTube</h3>
+                        <p>Works natively on standard YouTube and YouTube Music. The extension instantly detects what you are listening to.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-text">
+                        <h3>Click the Extension</h3>
+                        <p>Open Fetcher from your toolbar to instantly view synced lyrics and studio-quality high-resolution album art.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-text">
+                        <h3>Customize Your Setup</h3>
+                        <p>Use the settings gear to change fonts, switch between dark and light themes, and adjust the popup sizing to match your exact workflow.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-row">
+                <button class="btn btn-primary" id="close-welcome-btn">Start Listening</button>
+                <a href="options.html" class="btn btn-secondary">Configure Settings</a>
+            </div>
+        </div>
+    </div>
+    <script src="welcome.js"></script>
+</body>
+</html>

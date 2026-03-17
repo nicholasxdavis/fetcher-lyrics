@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Lyrics by Fetcher - YouTube Lyrics",
+  "version": "14.0.2",
+  "description": "The ultimate lyrics companion. Instant detection, strict accuracy matching.",
+  "permissions": ["tabs", "scripting", "storage"],
+  "host_permissions": [
+    "*://*.youtube.com/*", 
+    "*://music.youtube.com/*",
+    "*://lrclib.net/*", 
+    "*://api.lyrics.ovh/*",
+    "*://some-random-api.com/*",
+    "*://lyrist.vercel.app/*",
+    "*://api.genius.com/*",
+    "*://genius.com/*",
+    "*://itunes.apple.com/*",
+    "*://*.mzstatic.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "src/icons/icon16.png",
+      "32": "src/icons/icon32.png",
+      "48": "src/icons/icon48.png",
+      "128": "src/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "src/icons/icon16.png",
+    "32": "src/icons/icon32.png",
+    "48": "src/icons/icon48.png",
+    "128": "src/icons/icon128.png"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*", "*://music.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

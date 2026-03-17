@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings - Lyrics by Fetcher</title>
+    <link rel="stylesheet" href="options.css">
+    <link rel="stylesheet" href="src/vendor/pickr-nano.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Control Center</h1>
+            <p class="subtitle">Customize your Fetcher experience.</p>
+        </div>
+
+        <div class="settings-group">
+            <h2>Appearance</h2>
+            <div class="card">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h3>Theme</h3>
+                        <p>Select your interface color preference.</p>
+                    </div>
+                    <div class="custom-select" id="dropdown-theme" data-value="system">
+                        <div class="select-selected">System Auto</div>
+                        <div class="select-items select-hide">
+                            <div data-val="system">System Auto</div>
+                            <div data-val="dark">Dark Mode</div>
+                            <div data-val="light">Light Mode</div>
+                            <div data-val="midnight">Midnight</div>
+                            <div data-val="ocean">Ocean</div>
+                            <div data-val="slate">Slate</div>
+                            <div data-val="sandstone">Sandstone</div>
+                            <div data-val="forest">Forest</div>
+                            <div data-val="rose">Rose</div>
+                            <div data-val="custom">Custom</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-divider"></div>
+                <div class="setting-row custom-theme-row" id="custom-theme-row">
+                    <div class="setting-info">
+                        <h3>Custom Colors</h3>
+                        <p>Fine-tune your background, cards, text and accent.</p>
+                    </div>
+                    <div class="custom-theme-controls">
+                        <label class="custom-color">
+                            <span>Background</span>
+                            <div id="custom-bg" class="pickr-host"></div>
+                        </label>
+                        <label class="custom-color">
+                            <span>Card</span>
+                            <div id="custom-card" class="pickr-host"></div>
+                        </label>
+                        <label class="custom-color">
+                            <span>Text</span>
+                            <div id="custom-text" class="pickr-host"></div>
+                        </label>
+                        <label class="custom-color">
+                            <span>Accent</span>
+                            <div id="custom-accent" class="pickr-host"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-divider"></div>
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h3>Dynamic Background</h3>
+                        <p>Beautiful blurred album art behind lyrics. Disable for performance.</p>
+                    </div>
+                    <label class="switch"><input type="checkbox" id="bg-toggle"><span class="slider"></span></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <h2>Typography & Layout</h2>
+            <div class="card">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h3>Font Family</h3>
+                        <p>Powered by Geist, but you have options.</p>
+                    </div>
+                    <div class="custom-select" id="dropdown-font" data-value="geist">
+                        <div class="select-selected">Geist</div>
+                        <div class="select-items select-hide">
+                            <div data-val="geist">Geist</div>
+                            <div data-val="inter">Inter</div>
+                            <div data-val="system">System UI</div>
+                            <div data-val="dm-sans">DM Sans</div>
+                            <div data-val="space-grotesk">Space Grotesk</div>
+                            <div data-val="serif">Serif Classic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-divider"></div>
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h3>Text Size</h3>
+                        <p>Scale the lyrics text up or down.</p>
+                    </div>
+                    <div class="custom-select" id="dropdown-text" data-value="normal">
+                        <div class="select-selected">Normal</div>
+                        <div class="select-items select-hide">
+                            <div data-val="small">Small</div>
+                            <div data-val="normal">Normal</div>
+                            <div data-val="large">Large</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-divider"></div>
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h3>Extension Size</h3>
+                        <p>Change the width of the popup menu.</p>
+                    </div>
+                    <div class="custom-select" id="dropdown-popup" data-value="standard">
+                        <div class="select-selected">Standard</div>
+                        <div class="select-items select-hide">
+                            <div data-val="compact">Compact</div>
+                            <div data-val="standard">Standard</div>
+                            <div data-val="wide">Expanded</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-divider"></div>
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h3>Sticky Header</h3>
+                        <p>Keep the top controls pinned while scrolling lyrics.</p>
+                    </div>
+                    <label class="switch"><input type="checkbox" id="sticky-header-toggle" checked><span class="slider"></span></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <h2>System</h2>
+            <div class="card">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h3>Background Caching</h3>
+                        <p>Save fetched lyrics locally to load instantly next time.</p>
+                    </div>
+                    <label class="switch"><input type="checkbox" id="cache-toggle"><span class="slider"></span></label>
+                </div>
+                <div class="setting-divider"></div>
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h3>Support Button in Lyrics</h3>
+                        <p>Show or hide the “Support Us” button under the lyrics view.</p>
+                    </div>
+                    <label class="switch"><input type="checkbox" id="support-toggle" checked><span class="slider"></span></label>
+                </div>
+                <div class="setting-divider"></div>
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h3>Download Lyrics Button</h3>
+                        <p>Add a “Download Lyrics” action under the lyrics view.</p>
+                    </div>
+                    <label class="switch"><input type="checkbox" id="download-toggle"><span class="slider"></span></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-actions">
+            <div id="save-status">Settings saved automatically</div>
+            <div class="footer-buttons">
+                <a href="https://chromewebstore.google.com/detail/bdalpnalehanmepgccendgjmejipjjhj?utm_source=item-share-cb" target="_blank" class="review-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    Leave a Review
+                </a>
+                <a href="https://buymeacoffee.com/galore" target="_blank" class="support-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    Support the Developer
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Load locally bundled Pickr script before options.js so window.Pickr is available -->
+    <script src="src/vendor/pickr.min.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>
