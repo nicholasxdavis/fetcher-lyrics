@@ -65,3 +65,5 @@ Pull requests and issues are welcome! If you notice a lyrics provider breaking o
 ## License
 
 This project is licensed under the MIT License.
+
+![footer-banner](https://lh3.googleusercontent.com/SDi7Pcw90BY54lChwv6qR1o1fVmf8Yy90uBuApkMTei-RTiMTS73cktwDqpr1f9C860ISPah0G9WyEG-AAnqTNXcug=s1280-w1280-h800)
